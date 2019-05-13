@@ -22,7 +22,7 @@ services:
     depends_on:
       - "zookeeper"
   spark:
-    image: chapter-jvm-kafka:0.1
+    image: chapter-jvm-kafka:0.4
     ports:
       - 8080:8080
     networks: [ chapter-jvm ]

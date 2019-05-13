@@ -15,10 +15,12 @@ object WebServer {
     // needed for the future flatMap/onComplete in the end
     implicit val executionContext = system.dispatcher
 
+    val host = "35.202.97.31"//System.getenv("HOST_KAFKA")
+
     val route =
       path("hello") {
         get {
-          complete(HttpEntity(ContentTypes.`text/html(UTF-8)`, "<h1>Say hello to akka-http</h1>"))
+          complete(HttpEntity(ContentTypes.`text/html(UTF-8)`, "<h1>Kafka Host:" + host + "</h1>"))
         }
       }
 
